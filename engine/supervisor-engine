@@ -1,0 +1,32 @@
+#!/bin/bash
+
+NO_ARGS=0
+if [ $# -eq "$NO_ARGS" ]
+then
+	echo "Usage: jimageExtractor [OPTIONS] -x file.xml -i file.png \n
+         OPTIONS: \n
+         -d Debug mode, print information about processes\n
+	 -o output file, if omissis output will be on stdr output"
+exit
+fi
+
+# check parameters
+
+DEBUG=""
+while getopts "o:i:x:d" Option
+do
+   case $Option in
+      i ) 	IMAGE=$OPTARG;;
+      x ) 	XML=$OPTARG;;
+      o ) 	OUTPUT=$OPTARG;;
+      d	)	DEBUG="-d";;
+      [?])	print >&2 "error"
+      		exit 1;;
+   esac
+done
+
+JVM_OPTIONS="-Xms128m -Xmx512m"
+JAR_PATH="/usr/share/supervisor-engine/supervisor-engine-1.0-jar-with-dependencies.jar"
+#JAR_PATH="src/target/supervisor-engine-1.0-jar-with-dependencies.jar"
+
+java $JVM_OPTIONS -jar $JAR_PATH $XML $IMAGE $OUTPUT $DEBUG

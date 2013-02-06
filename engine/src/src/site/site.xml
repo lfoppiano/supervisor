@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="thesis">
+
+<publishDate format="dd/MM/yy"/>
+
+<poweredBy>
+    <logo name="Maven" href="http://maven.apache.org/"
+          img="http://maven.apache.org/images/logos/maven-feather.png"/>
+    <logo name="Byte-code srl" href="http://www.byte-code.com"
+          img="http://www.byte-code.lan/wiki/uploads/8/86/LogoPantone.png"/>
+  </poweredBy>
+
+  <body>
+    <menu ref="reports"/>
+
+    <links>
+        <item name="Byte-code srl" href="http://www.byte-code.com"/>
+        <item name="Apache" href="http://www.apache.org/" />
+        <item name="Maven 2" href="http://maven.apache.org/"/>
+    </links>
+
+  </body>
+
+</project>

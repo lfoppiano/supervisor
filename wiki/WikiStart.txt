@@ -1,0 +1,49 @@
+= Welcome to unknown Trac wiki =
+
+unknown is a temp name...we are waiting an idea for this tool ;-)
+
+[[Image(logo_tesi.png, align=right, width=300px)]]
+
+== What is Unknown? ==
+supervisor is a simple tool that permit to extract data from scannered form images by give a description file (xml) and images.
+supervisor is divided into two tools: supervisor-engine and supervisor-builder
+supervisor in new name, before was called jimageExtractor and xmlBuilderPlugin, respectively supervisor-engine and supervisor-builder 
+
+
+
+= supervisor-engine =
+supervisor-engine crop image and use tesseract to recognize handwritten and printed data.
+
+= supervisor-builder =
+supervisor-builder is a simple python GIMP plugin written to work with supervisor-engine.
+supervisor-builder can help user to create an xml image description. xml created is used as imput for supervisor-engine.
+
+Here you can find [wiki:HowToWork "how to work"]
+
+= Download =
+
+== RPM ==
+Install thesis repository
+
+{{{
+rpm -ivh http://www.foppiano.org/yumrepos/thesis/noarch/thesis-release-1.0-3.noarch.rpm
+}}}
+
+and then (will be changed next minor fix)
+{{{
+yum install xmlBuilderPlugin 
+}}}
+{{{
+yum install jimageExtractor 
+}}}
+
+== SVN ==
+If you get souce from svn:
+
+{{{
+svn checkout http://svn2.assembla.com/svn/supervisor/engine/trunk
+}}}
+
+{{{
+svn checkout http://svn2.assembla.com/svn/supervisor/builder/trunk
+}}}
